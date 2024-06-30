@@ -59,3 +59,43 @@
     </footer>
 </body>
 </html>
+
+<section id="iletisim">
+    <h2>İletişim</h2>
+    <p>Bize nasıl ulaşabileceğinizi öğrenmek için aşağıdaki bilgileri kullanabilirsiniz:</p>
+    <ul>
+        <li>Email: info@ahsapvetasev.com</li>
+        <li>Telefon: +90 555 555 5555</li>
+        <li>Adres: Ahşap ve Taş Ev İmalatı, İstanbul, Türkiye</li>
+    </ul>
+    <h3>Bize Ulaşın</h3>
+    <form action="mailto:info@ahsapvetasev.com" method="post" enctype="text/plain">
+        <label for="name">Adınız:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="message">Mesajınız:</label>
+        <textarea id="message" name="message" required></textarea>
+        <button type="submit">Gönder</button>
+    </form>
+</section>
+<section id="konum">
+    <h2>Konumumuz</h2>
+    <div id="map" style="width:100%;height:400px;"></div>
+    <script>
+      function initMap() {
+        var location = {lat: 41.0082, lng: 28.9784}; // İstanbul koordinatları
+        var map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 10,
+          center: location
+        });
+        var marker = new google.maps.Marker({
+          position: location,
+          map: map
+        });
+      }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+    </script>
+</section>
+
